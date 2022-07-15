@@ -6,11 +6,11 @@ import styles from "../UI/Header.module.css";
 const label = "Your Cart";
 const heading = "SBD Apparel";
 
-const Header = () => (
+const Header = ({ onCartClick }) => (
   <React.Fragment>
     <header className={styles.header}>
       <h1>{heading}</h1>
-      <CartButton label={label} />
+      <CartButton label={label} onCartClick={onCartClick} />
     </header>
     <div className={styles["main-image"]}>
       <img
