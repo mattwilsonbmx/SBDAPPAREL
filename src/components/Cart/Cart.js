@@ -4,7 +4,7 @@ import Modal from "../UI/Modal";
 const Cart = ({ onHideClick }) => {
   const cartItems = (
     <ul className={styles["cart-items"]}>
-      {[{ id: "c1", name: "", amount: 2, price: 13 }].map(item => (
+      {[{ key: "c1", name: "", amount: 2, price: 13 }].map(item => (
         <li>{item.name}</li>
       ))}
     </ul>

@@ -23,8 +23,8 @@ const AvailableProducts = () => {
 
   const availableProducts = dummyProducts.map(item => (
     <ProductItem
-      id={item.id}
       key={item.id}
+      id={item.id}
       name={item.name}
       price={item.price}
     />
