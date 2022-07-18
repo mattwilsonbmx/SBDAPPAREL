@@ -11,7 +11,7 @@ const Cart = ({ onHideClick }) => {
   );
 
   return (
-    <Modal>
+    <Modal onHideClick={onHideClick}>
       {cartItems}
       <div className={styles.total}>
         <span>Total Amount</span>
