@@ -1,7 +1,13 @@
+import React from "react";
 import ProductItemForm from "./ProductItemForm";
 import styles from "../UI/ProductItem.module.css";
 
-const ProductItem = ({ name, price }) => {
+type Props = {
+  name: string;
+  price: number;
+};
+
+const ProductItem = ({ name, price }: Props) => {
   const priceof = `£${price}`;
 
   return (

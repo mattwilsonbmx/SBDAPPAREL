@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../UI/AvailableProducts.module.css";
 import Card from "../UI/Card";
 import ProductItem from "./ProductItem";
@@ -5,29 +6,24 @@ import ProductItem from "./ProductItem";
 const AvailableProducts = () => {
   const dummyProducts = [
     {
-      id: "p1",
+      id: 1,
       name: "Defy Powerlifting Singlet",
-      price: 79.99
+      price: 79.99,
     },
     {
-      id: "p2",
+      id: 2,
       name: "Defy Weightlifting Knee Sleeves",
-      price: 64.99
+      price: 64.99,
     },
     {
-      id: "p3",
+      id: 3,
       name: "Defy Wrist Wraps",
-      price: 32.99
-    }
+      price: 32.99,
+    },
   ];
 
-  const availableProducts = dummyProducts.map(item => (
-    <ProductItem
-      id={item.id}
-      key={item.id}
-      name={item.name}
-      price={item.price}
-    />
+  const availableProducts = dummyProducts.map((item) => (
+    <ProductItem key={item.id} name={item.name} price={item.price} />
   ));
 
   return (

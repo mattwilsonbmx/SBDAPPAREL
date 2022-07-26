@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../UI/CartButton.module.css";
 
 const CartIcon = () => {

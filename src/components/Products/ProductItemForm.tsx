@@ -1,8 +1,13 @@
+import React from "react";
 import Input from "./Input";
 
 import styles from "../UI/ProductItemForm.module.css";
 
-const ProductItemForm = ({ id }) => {
+type Props = {
+  id?: number;
+};
+
+const ProductItemForm = ({ id }: Props) => {
   const addToCartHandler = () => {};
 
   return (
@@ -12,7 +17,7 @@ const ProductItemForm = ({ id }) => {
         placeholder="1"
         input={{
           id: "amount" + id,
-          type: "number"
+          type: "number",
         }}
       />
       <div>
