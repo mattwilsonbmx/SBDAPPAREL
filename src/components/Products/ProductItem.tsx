@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProductItemForm from "./ProductItemForm";
 import styles from "../UI/ProductItem.module.css";
 import CartContext from "../Cart/cart-context";
 
-const ProductItem = ({ name, price, id }) => {
-  const cartCtx = useContext(CartContext);
-  const priceof = `£${price.toFixed()}`;
-
 type Props = {
   name: string;
   price: number;
+  id?: number;
 };
 
-const ProductItem = ({ name, price }: Props) => {
-  const priceof = `£${price}`;
+const ProductItem = ({ name, price, id }: Props) => {
+  const cartCtx = useContext(CartContext);
+  const priceof = `£${price.toFixed()}`;
 
   return (
     <li className={styles.product}>
