@@ -1,6 +1,11 @@
 import React from "react";
 import ProductItemForm from "./ProductItemForm";
 import styles from "../UI/ProductItem.module.css";
+import CartContext from "../Cart/cart-context";
+
+const ProductItem = ({ name, price, id }) => {
+  const cartCtx = useContext(CartContext);
+  const priceof = `£${price.toFixed()}`;
 
 type Props = {
   name: string;
@@ -17,7 +22,7 @@ const ProductItem = ({ name, price }: Props) => {
         <div className={styles.price}>{priceof}</div>
       </div>
       <div>
-        <ProductItemForm />
+        <ProductItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );

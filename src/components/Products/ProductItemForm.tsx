@@ -11,8 +11,9 @@ const ProductItemForm = ({ id }: Props) => {
   const addToCartHandler = () => {};
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={submitHandler}>
       <Input
+        ref={amountInputRef}
         label="Amount"
         placeholder="1"
         input={{
@@ -21,7 +22,8 @@ const ProductItemForm = ({ id }: Props) => {
         }}
       />
       <div>
-        <button onClick={addToCartHandler}>+ Add</button>
+        <button>+ Add</button>
+        {!amountIsValid && <p>Please enter a valid amount</p>}
       </div>
     </form>
   );
